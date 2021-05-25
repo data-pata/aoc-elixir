@@ -1,4 +1,4 @@
-defmodule Aoc.Day01Test do
+defmodule Aoc.Day01aTest do
   use ExUnit.Case
 
   import Aoc.Day01

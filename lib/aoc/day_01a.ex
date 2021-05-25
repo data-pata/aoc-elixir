@@ -1,4 +1,4 @@
-defmodule Aoc.Day01 do
+defmodule Aoc.Day01a do
   @spec part1(binary) :: any
   @doc """
   for each term in set
@@ -53,7 +53,7 @@ defmodule Aoc.Day01 do
           &(find_inner.(&1, elem1, elem2)))
       end)
     end)
-    
+
   end
 
 end

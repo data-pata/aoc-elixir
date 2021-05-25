@@ -6,7 +6,8 @@ defmodule Aoc.Day01c do
   @doc """
   - no lazy eval on read
   - stops when sum is found
-  +
+  - linear time complexity of find_value ??
+  => use get
   """
   def part1(input) do
     lst = uniq_list(input)
@@ -27,11 +28,6 @@ defmodule Aoc.Day01c do
           &(find_inner(&1, elem1, elem2)))
       end)
     end)
-  end
-
-  @spec find_value(any, any, any) :: nil
-  def find_value(enum, default \\ nil, func) do
-
   end
 
   defp find_inner(e1, e2) do
@@ -61,7 +57,7 @@ defmodule Aoc.Day01c do
     if contains?(h, acc) do
       uniq(t, acc)
     else
-      uniq()
+      uniq(t, [h|acc])
     end
   end
 
